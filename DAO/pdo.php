@@ -4,7 +4,7 @@
  */
 function pdo_get_connection(){
 
-    $dburl = "mysql:host=localhost;dbname=vanhieup;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=vanhieu;charset=utf8";
 
 
     $username = 'root';
