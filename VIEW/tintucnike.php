@@ -3,17 +3,15 @@
         extract($_SESSION['s_user']);
         $html_account='
         
-        <li><a href="index.php?pg=myaccount">'.$ten.'</a></a></li>
+        <li><a href="admin/">'.$username.'</a></li>
+        <li><a href="index.php?pg=myaccount"><i class="fa-regular fa-address-card"></i></a></li>
+        <li><a href="index.php?pg=logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
         ' ;
-       
-       
     }else{
         $html_account='
-        <li><a href="index.php?pg=dangnhap"><img src="LAYOUT/img/user.png" alt="" width="30px"></a></li>';
+        <li><a href="index.php?pg=dangnhap"><i class="fa-solid fa-user"></i></a></li>';
     }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +21,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EPIC FOOT TIN TỨC</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="/LAYOUT/style.css">
-        <link rel="stylesheet" href="/LAYOUT/formmuahang/form.css">
-        <link rel="stylesheet" href="/LAYOUT/search.css">
-        <link rel="stylesheet" href="/LAYOUT/tintuchome.css">
-        <link rel="stylesheet" href="/LAYOUT/csstintuc/nike.css">
+        <link rel="stylesheet" href="LAYOUT/style.css">
+        <link rel="stylesheet" href="LAYOUT/formmuahang/form.css">
+        <link rel="stylesheet" href="LAYOUT/search.css">
+        <link rel="stylesheet" href="LAYOUT/tintuchome.css">
+        <link rel="stylesheet" href="LAYOUT/csstintuc/nike.css">
         
     </head>
 
