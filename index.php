@@ -175,7 +175,14 @@
                 }
                 # xử lý
                 user_insert($username, $password,$ten,$diachi ,$email , $dienthoai);
-                include './VIEW/dangnhap.php';
+                $emailBody = "
+                <h2>Cảm ơn bạn đã đăng ký tài khoản tại cửa hàng của chúng tôi</h2>
+                
+                <p>Trân trọng,</p>
+                <p>Đội ngũ cửa hàng của chúng tôi</p>
+                ";
+                SendMail($email, 'Đăng ký thành viên mới', 'EPIC FOOT', $emailBody);
+                header('location: index.php?pg=dangnhap');
                 break;
     
             case 'updateuser':
