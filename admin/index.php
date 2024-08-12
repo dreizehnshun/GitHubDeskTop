@@ -5,7 +5,16 @@
    include "../DAO/sanpham.php";
    include "../DAO/user.php";
    include "../DAO/donhang.php";
+   include "../DAO/binh-luan.php";
+   include "../DAO/tintuc.php";
+   include "../DAO/thong-ke.php";
    include "./VIEW/header.php";
+    $dem_sp =thong_ke_san_pham();
+    $dem_tv =thong_ke_thanh_vien();
+    $dem_dm =thong_ke_danh_muc();
+    $dem_dh =thong_ke_don_hang();
+    $dem_bl =thong_ke_binh_luan();
+    $dem_tt =thong_ke_tin_tuc();
    if(isset($_GET['pg'])){
         $pg=$_GET['pg'];
     switch ($pg) {
@@ -73,13 +82,27 @@
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                     $id=$_GET['id'];
                     $sp=get_sanphamchitiet($id);
-
                 }
                 //trở về trang dssp
                 $danhmuclist=danhmuc_all();
                 include "view/sanphamupdate.php";
                 break;
         case 'delproduct':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id=$_GET['id'];
+                $img=IMG_PATH_ADMIN.get_img($id);
+                if(is_file($img)){
+                    unlink($img);
+                    echo "<h3>Xóa sản phẩm thành công !!! </h3>";
+                }
+                try {
+                    sanpham_delete($id);
+                } catch (\Throwable $th) {
+                    //throw $th;
+                    echo "<h3 style='color:red;text-align:center'>Sản phẩm đã có trong giỏ hàng! Không được quyền xóa!</h3>";
+                }     
+            }
+            //trở về trang dssp
             if(isset($_POST['timkiem'])){
                 $kyw=$_POST['kyw'];
                 }else{
@@ -95,22 +118,6 @@
                 $dssp=get_dssp_admin($kyw,$page,$soluongsp);
                 $tongsosp=get_all_product_admin();
                 $hienthisotrang=hien_thi_so_trang($tongsosp,$soluongsp);
-            if(isset($_GET['id'])&&($_GET['id']>0)){
-                $id=$_GET['id'];
-                $img=IMG_PATH_ADMIN.get_img($id);
-                if(is_file($img)){
-                    
-                    unlink($img);
-                    echo "<h3>Xóa sản phẩm thành công !!! </h3>";
-                }
-                try {
-                    sanpham_delete($id);
-                } catch (\Throwable $th) {
-                    //throw $th;
-                    echo "<h3 style='color:red;text-align:center'>Sản phẩm đã có trong giỏ hàng! Không được quyền xóa!</h3>";
-                }     
-            }
-            //trở về trang dssp
             include "view/sanphamlist.php";
             break;
         case 'addproduct':
@@ -169,7 +176,7 @@
                 deldm($id);
             }
             $kq=danhmuc_all();
-            include "view/danhmuc.php";
+                include "view/danhmuc.php";
             break;
         case 'updatedmform':
             //lấy 1 RECORD  đúng với id truyền vào
@@ -296,6 +303,86 @@
                 }
                 $kq = order_all();
                 include "view/order.php";
+                break;
+            case 'binhluan':
+                $dsbl=binh_luan_select_all();
+                include "view/binhluan.php";
+                break;
+            case 'hidden_comment':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $id=$_GET['id'];
+                    binh_luan_hidden($id);
+                $dsbl=binh_luan_select_all();
+                header('location:index.php?pg=binhluan');
+            }
+                break;
+            case 'hien_comment':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $id=$_GET['id'];
+                    binh_luan_hien($id);
+                $dsbl=binh_luan_select_all();
+                header('location:index.php?pg=binhluan');
+            }
+                break;
+            case 'tintuc':
+                $dstt=tin_tuc_select_all();
+                include "view/tintuc.php";
+                break;
+            case 'tintucupdate':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $id=$_GET['id'];
+                    $tt=tin_tuc_select_by_id($id);
+                    include "view/tintucupdate.php";
+                }
+                break;
+            case 'uptintuc':
+                if(isset($_POST['uptintuc'])){
+                    $name=$_POST['name'];
+                    $mota=$_POST['mota'];
+                    $noidung=$_POST['noidung'];
+                    $id=$_POST['id'];
+        
+                    $img=$_FILES['img']['name'];
+                    if($img!=""){
+        
+                    //upload hình ảnh
+                    $target_file=IMG_PATH_ADMIN.$img;
+                    move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+                    }else{
+                        $img="";
+                    }
+                    update_tin_tuc($name, $img, $mota, $noidung,$id);
+                }
+                $dstt=tin_tuc_select_all();
+                include "view/tintuc.php";
+                break;
+            case 'deltin':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $id=$_GET['id'];
+                    del_tin_tuc($id);
+                }
+                $dstt=tin_tuc_select_all();
+                include "view/tintuc.php";
+                break;
+            case 'tinadd':
+                if(isset($_POST['btnnadd'])){
+                    $name=$_POST['name'];
+                    $mota=$_POST['mota'];
+                    $noidung=$_POST['noidung'];
+                    $img=$_FILES['img']['name'];
+                    if($img!=""){
+        
+                    //upload hình ảnh
+                    $target_file=IMG_PATH_ADMIN.$img;
+                    move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+                    }else{
+                        $img="";
+                    }
+                tin_tuc_insert($name,$img,$mota,$noidung);
+                $tb="Bạn đã thêm thành công!";
+                $dstt=tin_tuc_select_all();      
+                }
+                include "view/tinadd.php";
                 break;
         default:
             include "view/home.php";

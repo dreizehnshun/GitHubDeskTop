@@ -1,26 +1,27 @@
 <?php
 require_once 'pdo.php';
 
-function thong_ke_hang_hoa(){
-    $sql = "SELECT lo.ma_loai, lo.ten_loai,"
-            . " COUNT(*) so_luong,"
-            . " MIN(hh.don_gia) gia_min,"
-            . " MAX(hh.don_gia) gia_max,"
-            . " AVG(hh.don_gia) gia_avg"
-            . " FROM hang_hoa hh "
-            . " JOIN loai lo ON lo.ma_loai=hh.ma_loai "
-            . " GROUP BY lo.ma_loai, lo.ten_loai";
+function thong_ke_san_pham(){
+    $sql = "SELECT COUNT(*) AS total_products FROM sanpham";
     return pdo_query($sql);
 }
-
+function thong_ke_thanh_vien(){
+    $sql = "SELECT COUNT(*) AS total_users FROM user";
+    return pdo_query($sql);
+}
+function thong_ke_danh_muc(){
+    $sql = "SELECT COUNT(*) AS total_danhmuc FROM danhmuc";
+    return pdo_query($sql);
+}
+function thong_ke_don_hang(){
+    $sql = "SELECT COUNT(*) AS total_donhang FROM bill";
+    return pdo_query($sql);
+}
 function thong_ke_binh_luan(){
-    $sql = "SELECT hh.ma_hh, hh.ten_hh,"
-            . " COUNT(*) so_luong,"
-            . " MIN(bl.ngay_bl) cu_nhat,"
-            . " MAX(bl.ngay_bl) moi_nhat"
-            . " FROM binh_luan bl "
-            . " JOIN hang_hoa hh ON hh.ma_hh=bl.ma_hh "
-            . " GROUP BY hh.ma_hh, hh.ten_hh"
-            . " HAVING so_luong > 0";
+    $sql = "SELECT COUNT(*) AS total_binhluan FROM binhluan";
+    return pdo_query($sql);
+}
+function thong_ke_tin_tuc(){
+    $sql = "SELECT COUNT(*) AS total_tintuc FROM tintuc";
     return pdo_query($sql);
 }
