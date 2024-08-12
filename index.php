@@ -127,9 +127,9 @@
                         $diachi=$_POST['diachi'];
                         $email=$_POST['email'];
                         $dienthoai=$_POST['dienthoai'];                   
-                        $nguoinhan_ten=$_POST['nguoinhan_hoten'];
-                        $nguoinhan_diachi=$_POST['nguoinhan_diachi'];
-                        $nguoinhan_tel=$_POST['nguoinhan_tel'];
+                        // $nguoinhan_ten=$_POST['nguoinhan_hoten'];
+                        // $nguoinhan_diachi=$_POST['nguoinhan_diachi'];
+                        // $nguoinhan_tel=$_POST['nguoinhan_tel'];
                         $pttt=$_POST['pttt'];
                     
                         // insert use mới
@@ -146,7 +146,7 @@
                             $voucher=0;
                         }                  
                         $tongthanhtoan=($total-$voucher)+$ship;                   
-                        $idbill=bill_insert_id($madh,$iduser,$hoten,$email,$dienthoai,$diachi,$nguoinhan_ten,$nguoinhan_diachi,$nguoinhan_tel,$total,$ship,$voucher,$tongthanhtoan,$pttt);
+                        $idbill=bill_insert_id($madh,$iduser,$hoten,$email,$dienthoai,$diachi,$total,$ship,$voucher,$tongthanhtoan,$pttt);
                     foreach ($_SESSION['giohang']as $sp){
                         extract($sp);
                         cart_insert($idpro, $price, $name, $img, $soluong,$thanhtien, $idbill);
