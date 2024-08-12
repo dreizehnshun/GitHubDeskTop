@@ -49,6 +49,32 @@
         <span><?=$mota?></span>
     </div>
 </section>
+<div>
+    <h1>Bình luận </h1>
+    <div class="comment-section">
+    <div class="comment-form">
+        <?php
+        if(isset($_SESSION['s_user'])):?> 
+    <form action="index.php?pg=add_comment&idpro=<?=$id?>" method="post">
+    <textarea name="noidung" placeholder="Nhập bình luận của bạn"></textarea>
+    <button type="submit" name="add_comment">Gửi</button>
+</form>
+<?php else: ?>
+<p><a href="index.php?pg=dangnhap">Đăng nhập</a> để có thể bình luận</p>
+<?php endif; ?>
+    <div class="comments">
+    <?php foreach($dsbl as $bl): ?>
+        <div class="comment">
+            <div>
+            <strong><?=$bl['ten']?></strong>
+            <?=$bl['ngaybl'] ?>
+            </div>
+            <p><?=$bl['noidung']?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+  </div>
+    </div>
 
 
 
