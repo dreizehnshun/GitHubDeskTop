@@ -821,10 +821,16 @@ footer .copyright{
 }
 
 }
-.cart{
-  button{
-    i{
+.blink {
+  animation: blink 0.5s infinite;
+  color: white; /* Set the desired color */
+}
 
-    }
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
   }
 }
