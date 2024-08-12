@@ -29,7 +29,6 @@
                     $iddm =0;
                 }else{
                     $iddm =$_GET['iddm'];
-                    
                 }
                 $dssp=get_dssp($iddm,12);
                 include './VIEW/sanpham.php';
