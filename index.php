@@ -148,8 +148,6 @@
                 }
                 include './VIEW/donhang_confirm.php ';     
                 break;
-                
-
             case 'myaccount':
                 if (isset($_SESSION['s_user'])&&(count($_SESSION['s_user'])>0)){
                     include './VIEW/myaccount.php';
@@ -188,14 +186,6 @@
                     include './VIEW/myaccount_confirm.php';
                 }
                 break;
-
-
-
-
-            
-
-
-
             case 'dangky':
                 include './VIEW/dangky.php';
                 break;
