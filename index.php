@@ -13,6 +13,7 @@
     include 'DAO/donhang.php';
     include 'DAO/binh-luan.php';
     include 'DAO/tintuc.php';
+    include 'DAO/m_sentmail.php';
     include './VIEW/header.php';
     
     
