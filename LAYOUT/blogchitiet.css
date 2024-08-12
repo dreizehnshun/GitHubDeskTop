@@ -1,0 +1,23 @@
+.container-blog {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display:grid;
+    grid-template-columns: 7fr 3fr;
+    grid-gap: 5cap;
+  }
+  
+  .tin-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tin-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .tin-noidung {
+    line-height: 1.6;
+  }
