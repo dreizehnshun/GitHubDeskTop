@@ -1,3 +1,92 @@
+<style>
+    /* Đặt font và màu sắc mặc định cho trang */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Khung chứa nội dung giới thiệu */
+.khung-gt {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Style cho tiêu đề chính */
+h1 {
+    color: #2c3e50;
+}
+
+/* Style cho phần nội dung */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+/* Style cho phần về chúng tôi */
+.about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+/* Style cho bản đồ */
+#map {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Style cho sản phẩm nổi bật */
+.products {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.product-info p {
+    color: #7f8c8d;
+}
+
+/* Hiệu ứng hover cho sản phẩm */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+</style>
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -10,16 +99,15 @@
 
     <link rel="stylesheet" href="./LAYOUT/gioithieu.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
+        <div class="khung-gt">
             <h1>Chào mừng đến với EPIC FOOT !</h1>
             <p>Khám phá bộ sưu tập giày thời trang và chất lượng của chúng tôi.</p>
         </div>
-    </header>
     <main>
         <section class="about">
-            <div class="container">
+            <div class="khung-gt">
                 <h2>Về chúng tôi</h2>
                 <p>EPIC FOOT cung cấp những mẫu giày độc quyền, chất lượng hàng đầu với thiết kế thời thượng. Đến với chúng tôi, bạn sẽ tìm thấy sự hoàn hảo cho phong cách của mình.</p>
                 <h3>Địa chỉ của chúng tôi</h3>
@@ -28,7 +116,7 @@
             </div>
         </section>
         <section class="products">
-            <div class="container">
+            <div class="khung-gt">
                 <h2>Sản phẩm nổi bật</h2>
                 <div class="product-grid">
                     <div class="product-card">
@@ -56,11 +144,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 StepUp. Tất cả các quyền được bảo lưu.</p>
-        </div>
-    </footer>
     <script>
         function initMap() {
             const shopLocation = { lat: 10.852286407186613, lng: 106.62691448619287 }; // Thay đổi tọa độ theo địa chỉ của bạn 10.852286407186613, 106.62691448619287

@@ -33,7 +33,7 @@ if (isset($_POST['timkiem'])) {
                                 </a>
                                 <form action="index.php?pg=addcart" method="post">
                                     <input type="hidden" name="name" value="<?= htmlspecialchars($sanpham['name']) ?>">
-                                    <input type="hidden" name="img" value="<?= htmlspecialchars($sanpham['img']) ?>">
+                                    <input type="hidden" name="img" value="img/<?= htmlspecialchars($sanpham['img']) ?>">
                                     <input type="hidden" name="price"  value="<?= htmlspecialchars($sanpham['price']) ?>">
                                     <input type="number" name="soluong" min="1" value="1" max="10">
                                     <hr>

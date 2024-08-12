@@ -26,7 +26,6 @@
     </div>
 
     <div class="single-prp-details">
-        <h6>Trang chủ/ Áo thun</h6>
         <h4><?=$name?></h4>
         <h2><?=$price?></h2>
             <select>
@@ -38,8 +37,9 @@
             </select>
 
             <form action="index.php?pg=addcart" method="post">
+                <input type="hidden" name="idpro" value="<?=$id?>">
                     <input type="hidden" name="name" value="<?=$name?>">
-                    <input type="hidden" name="img" value="<?=$img?>">
+                    <input type="hidden" name="img" value="img/<?=$img?>">
                     <input type="hidden" name="price" value="<?=$price?>">
                     <input type="number" name="soluong" id="" min="1" value="1" max="10">
                     <button class="normal"style="submit" name="addcart">Thêm vào giỏ hàng</button>
