@@ -80,7 +80,6 @@
                         $thanhtoan=$tongdonhang - $giatrivoucher;
                     include './VIEW/view_giohang.php';
                 }
-                
                 break;
             case 'login':
                 if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
@@ -200,10 +199,8 @@
                 $price=$_POST['price'];
                 $iddm=$_POST['iddm'];
                 $id=$_POST['id'];
-    
                 $img=$_FILES['img']['name'];
                 if($img!=""){
-    
                 //upload hình ảnh
                 $target_file=IMG_PATH_ADMIN.$img;
                 move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
@@ -239,7 +236,6 @@
                     if(isset($_GET['id'])&&($_GET['id']>0)){
                         $id=$_GET['id'];
                         $sp=get_sanphamchitiet($id);
-    
                     }
                     //trở về trang dssp
                     $danhmuclist=danhmuc_all();
@@ -255,7 +251,6 @@
                     try {
                         sanpham_delete($id);
                     } catch (\Throwable $th) {
-                        //throw $th;
                         echo "<h3 style='color:red;text-align:center'>Sản phẩm đã có trong giỏ hàng! Không được quyền xóa!</h3>";
                     }     
                 }
@@ -323,7 +318,6 @@
                     include "view/danhmuc.php";
                     break;
                 }
-                        //cần dsdm
             case 'user':
                 $kq=user_select_all();
                 include "view/user.php";
@@ -336,7 +330,6 @@
                     $diachi=$_POST['diachi'];
                     $email=$_POST['email'];
                     $dienthoai=$_POST['dienthoai'];
-    
                     user_insert($username, $password,$ten,$diachi,$email , $dienthoai);
                     $tb="Bạn đã thêm thành công!";
                 }
