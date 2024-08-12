@@ -1,0 +1,84 @@
+/* CSS for product search results */
+.section-p1 {
+    padding: 20px;
+}
+
+.pro-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.pro {
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pro img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.pro:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pro .des {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.pro .des h5 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.pro .star {
+    color: #FFD700;
+}
+
+.pro .des h4 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #088178;
+}
+
+.pro form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.pro form button {
+    background-color: #088178;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pro form button:hover {
+    background-color: #065a58;
+}
+
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black ;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.price{
+    color: black;
+}

@@ -1,0 +1,71 @@
+.description {
+    display: flex;
+    justify-content: center; 
+    padding: 10px; 
+    margin: 0;
+    list-style-type: none;
+    background-color: #f9f9f9; 
+}
+
+.description li {
+    padding: 10px 20px; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    margin: 0 5px; 
+    display: flex;
+    align-items: center; 
+    background-color: #fff; 
+}
+
+.description a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.description a:hover {
+    color: #007BFF;
+}
+
+
+/* hiệu ứng hover sản phẩm */
+
+/* Container styling */
+.pro-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+/* Product item styling */
+.pro {
+    flex: 1 1 250px; 
+    margin: 10px; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    position: relative; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+/* Image styling */
+.pro img {
+    width: 100%; 
+    display: block; 
+}
+
+/* Highlight effect on hover */
+.pro-container:hover .pro {
+    opacity: 0.2; 
+    transition: opacity 0.3s ease;
+}
+
+.pro-container .pro:hover {
+    transform: scale(1.05); 
+    opacity: 1; 
+    z-index: 10; 
+}
+
+

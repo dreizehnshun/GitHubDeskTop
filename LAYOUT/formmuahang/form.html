@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <a href="#"><img src="#" alt="" width="30%" ></a>
+    </header>
+    <div class="container">
+        <form action="" class="form-horizontal"id="personal">
+            <div class="col-md-12 mt-5">
+                <h1 align="center">Phiếu đăng ký mua hàng</h1>
+            </div>
+            <div class="row ">
+                <div class="col-xs-3">
+                    <label for="">Tên sản phẩm</label>
+                </div>
+                <div class="col-md-9">
+                    <p class="name text-info"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <label for="">Giá</label>
+                </div>
+                <div class="col-md-9">
+                    <p class="cost text-info"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">Số lượng</label>
+                    <div class="col-md-9">
+                        <input type="number" name="" id="sl" class="ml-3" value="1"min="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="name" class="control-label col-xs-3">Họ và tên</label>
+                    <div class="col-md-9">
+                        <input type="text" name="" id="username" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">Ngày sinh</label>
+                    <div class="col-md-9">
+                        <input type="date" name="" id="ns" class="form-control ml-3">
+                        <span class="text-danger">*</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">CMND/<br>CCCD</label>
+                    <div class="col-md-9">
+                        <input type="text" name="" id="cccd" class="form-control">
+                        <span class="text-danger">*</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">Giới tính</label>
+                    <div class="col-md-9">
+                            <input type="radio" name="gt" id="" class="ml-5"value="nam">Nam
+                            <input type="radio" name="gt" id="" class="ml-5" value="nữ">Nữ
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">Địa chỉ</label>
+                    <div class="col-md-9">
+                        <input type="text" name="" id="addr" class="form-control ml-4">
+                        <span class="text-danger ml-4">*</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">Số điện<br>thoại</label>
+                    <div class="col-md-9">
+                        <input type="tel" name="" id="phone" class="form-control ">
+                        <span class="text-danger ">*</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3 mr-2">Email</label>
+                    <div class="col-md-9">
+                        <input type="email" name="" id="email" class="form-control ml-4">
+                        <span class="text-danger ml-4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3">phương thức<br>thanh toán</label>
+                    <div class="col-md-9">
+                            <input type="radio" name="pay" id="" class="ml-5" value="0">Thanh toán bằng thẻ ngân hàng
+                            <input type="radio" name="pay" id="" class="ml-5" value="1">Thanh toán khi nhận hàng
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form action="" class="form-horizontal" id="card">
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3 mr-2">Tên ngân<br>hàng</label>
+                    <div class="col-md-9">
+                        <select name="" id="nameBank" class="form-control">
+                            <option value="Argibank">Argibank</option>
+                            <option value="Sacombank">Sacombank</option>
+                            <option value="MB Bank">MB Bank</option>
+                            <option value="Vietcombank">Vietcombank</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-xs-3 mr-3">Số thẻ</label>
+                    <div class="col-md-9">
+                        <input type="text" name="" id="numcard" class="form-control ml-2">
+                        <span class="text-danger ml-2">*</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row"align="right">
+            <div class="col-xs-3">
+                <p class="ml-3">Tổng</p>
+            </div>
+            <div class="col-md-9">
+                <p class="total"></p>
+            </div>
+        </div>
+            <button class="btn btn-success" id="book">Đặt hàng</button>
+    </div>
+    <script src="/form.js"></script>
+</body>
+</html>

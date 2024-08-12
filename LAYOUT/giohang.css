@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-weight: normal;
+}
+
+.containerfull {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bgbanner {
+    background-color: #088178;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.col9 {
+    width: 65%;
+    margin-right: 5%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.col3 {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.viewcart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.viewcart th, .viewcart td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.viewcart th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.viewcart img {
+    max-width: 50px;
+    height: auto;
+}
+
+.total, .coupon {
+    margin-top: 20px;
+}
+
+.total h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+.coupon input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.coupon button {
+    background-color: #088178;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.coupon button:hover {
+    background-color: #066b64;
+}
+
+.bam {
+    width: 100%;
+    background-color: #088178;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.bam:hover {
+    background-color: #066b64;
+}
+
+a {
+    text-decoration: none;
+    color: #088178;
+}
+
+@media (max-width: 768px) {
+    .col9, .col3 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bgbanner {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .coupon input[type="text"] {
+        width: calc(100% - 90px);
+    }
+}

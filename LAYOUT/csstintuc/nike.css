@@ -1,0 +1,27 @@
+.container-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* padding: 40px 80px; */
+}
+
+
+
+
+
+#img-tintuc{
+    display: block;
+    margin: auto;
+    width: 780px;
+}
+
+#content{
+    font-size: 16px;
+}
+
+#title {
+    font-size: 24px; 
+    font-weight: bold;
+}
