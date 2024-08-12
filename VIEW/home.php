@@ -24,11 +24,12 @@
 ?>
 
 <section id="hero">
-            <h4>CHUYÊN TRAO ĐỔI VÀ CUNG CẤP</h4>   
-            <h2>ƯU ĐÃI SIÊU HOT</h2>
-            <h1 style="color: #369abf">Voucher áp dụng cho tất cả sản phẩm</h1>
-            <button class="blink" ><a href="index.php?pg=sanpham">MUA NGAY</a></button>
-</section>
+            <h4>Trao đổi và cung cấp</h4>   
+            <h2>Uư đải siêu giá trị</h2>
+            <h1>Trên tất cả các sản phẩm</h1>
+            <p>Tiết kiệm nhiều hơn với phiếu giảm giá & lên tới 70%</p>
+            <button><a href="index.php?pg=sanpham">Mua ngay</a></button>
+        </section>
 
     <section id="product1" class="section-p1">
                 <h2>SẢN PHẨM HOT</h2>

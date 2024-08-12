@@ -54,7 +54,7 @@
                 break;
             case 'addcart':
                 if (isset($_POST["addcart"])) {
-                    $idpro=$_POST["idpro"];
+                    $idpro=$_POST['idpro'];
                     $name=$_POST["name"];
                     $img=$_POST["img"];
                     $price=$_POST["price"];
