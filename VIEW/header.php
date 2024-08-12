@@ -30,7 +30,8 @@
         <link rel="stylesheet" href="LAYOUT/blog.css">
         <link rel="stylesheet" href="LAYOUT/tintucfooter.css">
         <link rel="stylesheet" href="LAYOUT/search.css">
-        
+        <link rel="stylesheet" href="LAYOUT/comment.css">
+        <link rel="stylesheet" href="LAYOUT/blogchitiet.css">
     </head>
     <body>
         <section id="header">
