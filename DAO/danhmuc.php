@@ -7,7 +7,7 @@ function danhmuc_insert($ten_danhmuc){
 }
 
 function deldm($id){
-    $sql = "DELETE FROM danhmuc WHERE id=".$id;
+    $sql = "DELETE  FROM danhmuc WHERE id=?";
    if(is_array($id)){
         foreach ($id as $dm) {
             pdo_execute($sql, $dm);

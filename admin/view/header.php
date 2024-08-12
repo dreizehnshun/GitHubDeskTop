@@ -37,10 +37,16 @@
                         <a href="index.php?pg=danhmuc"><i class="fa-solid fa-folder-open ico-side"></i>Quản lí danh muc</a>
                     </li>
                     <li>
-                        <a href="index.php?pg=sanphamlist"><i class="fas fa-tshirt"></i>Quản lí sản phẩm</a>
+                        <a href="index.php?pg=sanphamlist"><i class="fas fa-tshirt"></i> Quản lí sản phẩm</a>
                     </li>
                     <li>
                         <a href="index.php?pg=user "><i class="fa-solid fa-user ico-side"></i>Quản lí thành viên</a>
+                    </li>
+                    <li>
+                    <a href="index.php?pg=binhluan "><i class="fa-solid fa-comment"></i> Quản lí bình luận</a>
+                    </li>
+                    <li>
+                    <a href="index.php?pg=tintuc "><i class="fa-solid fa-newspaper"></i> Quản lí tin tức</a>
                     </li>
                 </ul>
             </nav>

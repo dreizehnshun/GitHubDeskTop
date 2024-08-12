@@ -16,6 +16,7 @@
                             <th>Điện thoại</th>
                             <th>Email</th>
                             <th>Role</th> 
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <?php
@@ -30,14 +31,19 @@ foreach ($kq as $user) {
     <td>'.$user['diachi'].'</td>
     <td>'.$user['email'].'</td>
     <td>'.$user['dienthoai'].'</td>
-    <td>'.$user['role'].'</td>
+    <td>';
+    if ($user['role'] == 1) {
+        echo 'admin';
+    } else {
+        echo 'khách hàng';
+    }
+    echo '</td>
     
-
     <td>
         <a href="index.php?pg=useredit&id='.$user['id'].'" class="btn btn-warning"><i
-                class="fa-solid fa-pen-to-square"></i> Sửa</a>
-                <a href="index.php?pg=deluser&id='.$user['id'].'" class="btn btn-danger"><i
-                class="fa-solid fa-trash"></i> Xóa</a>   
+                class="fa-solid fa-pen-to-square"></i> Cập nhật</a>
+                <a href="#" onclick="return confirmDelete('.$user['id'].');" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i> Xóa</a>  
     </td>
     </tr>';
     $i++;
@@ -49,5 +55,12 @@ foreach ($kq as $user) {
         </div>
     </div>
     <script>
-        new DataTable('#example');
-    </script>
+function confirmDelete(id) {
+    if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
+        window.location.href = "index.php?pg=deluser&id=" + id;
+        return true;
+    } else {
+        return false;
+    }
+}
+</script>
