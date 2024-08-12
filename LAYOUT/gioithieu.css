@@ -1,107 +1,97 @@
+/* General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
     color: #333;
-    background: #f4f4f4;
 }
 
-header {
-    background: linear-gradient(135deg, #ff6f61, #de6161);
-    color: #fff;
-    padding: 80px 20px;
+h1 {
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3.5em;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.3em;
-    margin-top: 10px;
-    font-weight: 300;
-}
-
-main {
-    padding: 40px 20px;
-}
-
-.about, .products {
-    margin-bottom: 40px;
-}
-
-.about h2, .products h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.about p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    text-align: center;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
-    border-radius: 10px;
     margin-top: 20px;
+    color: #2c3e50;
 }
 
+p {
+    text-align: center;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Section Styling */
+section.about,
+section.products {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Khung-GT Styling */
+.khung-gt {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.khung-gt h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Product Grid Styling */
 .product-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.product-card {
-    background: #fff;
+.product-gt {
+    background-color: #f1f1f1;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
     width: 300px;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.product-card img {
+.product-gt:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-gt img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
 }
 
 .product-info {
     padding: 15px;
+    text-align: center;
 }
 
 .product-info h3 {
-    margin: 10px 0;
-    font-size: 1.8em;
-    font-weight: 700;
+    margin-bottom: 10px;
+    color: #27ae60;
+    font-size: 20px;
 }
 
 .product-info p {
-    font-size: 1.1em;
-    color: #666;
+    font-size: 14px;
+    color: #555;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 15px 20px;
-    text-align: center;
+/* Map Styling */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
